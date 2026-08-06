@@ -1,0 +1,35 @@
+.admin-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-left {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.nav-item.active {
+  color: #1e88e5;
+  background: rgba(30, 136, 229, 0.1);
+}
+
+.logout-btn {
+  background: #1e88e5;
+  color: white;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
