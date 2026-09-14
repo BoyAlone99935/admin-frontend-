@@ -1,7 +1,7 @@
 import {Routes , Route} from "react-router-dom";
 import Login from "./pages/auth/Login";
 import Dashboard from "./pages/dashboard/Dashboard";
-import ProtectedRoute from "./ProtectedRoute";
+
 import { AuthContext } from "./AuthContext";
 import { useContext } from "react";
 import Spinner from "./Spinner";
@@ -27,17 +27,17 @@ function App() {
     <Routes>
       <Route path="/" element={<Login />} />
       <Route path="/admin/dashboard" element={<Dashboard />} />
-      <Route path="/admin/create-celebrity" element={<ProtectedRoute><CreateCelebrity /></ProtectedRoute>} />
-      <Route path="/admin/celebrity/:id" element={<ProtectedRoute><Celebrity /></ProtectedRoute>} />
-      <Route path="/admin/create-event/:id" element={<ProtectedRoute><CreateEvent /></ProtectedRoute>} />
-      <Route path="/admin/event/:id" element={<ProtectedRoute><Event /></ProtectedRoute>} />
-      <Route path="/admin/create-ticket/:id" element={<ProtectedRoute><CreateTicket /></ProtectedRoute>} />
-      <Route path="/admin/requests" element={<ProtectedRoute><Requests/></ProtectedRoute>} />
-      <Route path="/admin/payments" element={<ProtectedRoute><Payments/></ProtectedRoute>} />
-      <Route path="/admin/purchases" element={<ProtectedRoute><Purchases/></ProtectedRoute>} />
-      <Route path="/admin/payment-method" element={<ProtectedRoute><PaymentMethod/></ProtectedRoute>} />
-      <Route path="/admin/create-meet/:id" element={<ProtectedRoute><CreateMeet/></ProtectedRoute>} />
-       <Route path="/admin/manage-meet/:id" element={<ProtectedRoute><ManageMeet/></ProtectedRoute>} />
+      <Route path="/admin/create-celebrity" element={<CreateCelebrity />} />
+      <Route path="/admin/celebrity/:id" element={<Celebrity />} />
+      <Route path="/admin/create-event/:id" element={<CreateEvent />} />
+      <Route path="/admin/event/:id" element={<Event />} />
+      <Route path="/admin/create-ticket/:id" element={<CreateTicket />} />
+      <Route path="/admin/requests" element={<Requests/>} />
+      <Route path="/admin/payments" element={<Payments/>} />
+      <Route path="/admin/purchases" element={<Purchases/>} />
+      <Route path="/admin/payment-method" element={<PaymentMethod/>} />
+      <Route path="/admin/create-meet/:id" element={<CreateMeet/>} />
+       <Route path="/admin/manage-meet/:id" element={<ManageMeet/>} />
     </Routes>
   )
 }

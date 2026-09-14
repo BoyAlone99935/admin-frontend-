@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Navigate } from "react-router-dom";
 import { AuthContext } from "./AuthContext";
 
-const ProtectedRoute = ({ children }) => {
+const  protectedRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
 
   // ⏳ wait until auth check is done
@@ -19,4 +19,4 @@ const ProtectedRoute = ({ children }) => {
   return children;
 };
 
-export default ProtectedRoute;
+export default protectedRoute;

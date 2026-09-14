@@ -5,7 +5,7 @@ export const AuthContext = createContext(); // ✅ THIS WAS MISSING
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [count , setCount] = useState(0);
 
   
@@ -38,9 +38,9 @@ export const AuthProvider = ({ children }) => {
 
 
 
-  useEffect(() => {
+  /*useEffect(() => {
     fetchUser();
-  }, []);
+  }, []);*/
 
   const login = (userData) => {
     setUser(userData);
