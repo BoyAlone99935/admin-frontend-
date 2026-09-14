@@ -26,7 +26,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Login />} />
-      <Route path="/admin/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+      <Route path="/admin/dashboard" element={<Dashboard />} />
       <Route path="/admin/create-celebrity" element={<ProtectedRoute><CreateCelebrity /></ProtectedRoute>} />
       <Route path="/admin/celebrity/:id" element={<ProtectedRoute><Celebrity /></ProtectedRoute>} />
       <Route path="/admin/create-event/:id" element={<ProtectedRoute><CreateEvent /></ProtectedRoute>} />

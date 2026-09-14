@@ -15,7 +15,10 @@ export const AuthProvider = ({ children }) => {
     const res = await api.get(
       "https://fan-platform-backend.onrender.com/user/me",
       {
-        withCredentials: true,
+          headers: {
+  "Content-Type": "application/json",
+  Authorization: `Bearer ${localStorage.getItem("token")}`,
+},
       }
     );
 

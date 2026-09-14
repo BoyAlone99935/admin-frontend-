@@ -35,6 +35,8 @@ export default function Login() {
     console.log("✅ Response:", response);
     console.log("✅ Response Data:", response.data);
 
+    localStorage.setItem("adminToken", response.data.token);
+
     console.log("3️⃣ About to navigate...");
     navigate("/admin/dashboard");
     console.log("4️⃣ Navigate called");

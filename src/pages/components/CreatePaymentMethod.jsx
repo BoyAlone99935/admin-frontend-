@@ -130,7 +130,10 @@ export default function CreatePaymentModal({
 
       const res = await fetch(url, {
         method: method ? "PATCH" : "POST",
-        credentials: "include",
+          headers: {
+  "Content-Type": "application/json",
+  Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
+},
         body,
       });
 

@@ -25,14 +25,20 @@ export default function Purchases() {
         fetch(
           "https://fan-platform-backend.onrender.com/api/v1/tickets/all",
           {
-            credentials: "include",
+              headers: {
+  "Content-Type": "application/json",
+  Authorization: `Bearer ${localStorage.getItem("token")}`,
+},
           }
         ),
 
         fetch(
           "https://fan-platform-backend.onrender.com/api/v1/booking/completed-payments",
           {
-            credentials: "include",
+              headers: {
+  "Content-Type": "application/json",
+  Authorization: `Bearer ${localStorage.getItem("token")}`,
+},
           }
         ),
       ]);

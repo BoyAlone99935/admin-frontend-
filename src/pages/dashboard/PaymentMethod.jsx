@@ -27,7 +27,10 @@ export default function PaymentMethods() {
       const res = await fetch(
         "https://fan-platform-backend.onrender.com/api/v1/payment-methods",
         {
-          credentials: "include",
+            headers: {
+  "Content-Type": "application/json",
+  Authorization: `Bearer ${localStorage.getItem("token")}`,
+},
         }
       );
 

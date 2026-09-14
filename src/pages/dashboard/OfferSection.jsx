@@ -65,7 +65,10 @@ export default function OfferSection({
         `https://fan-platform-backend.onrender.com/api/v1/booking/create-offer/${request._id}`,
         {
           method: "POST",
-          credentials: "include",
+            headers: {
+  "Content-Type": "application/json",
+  Authorization: `Bearer ${localStorage.getItem("token")}`,
+},
           body: formData,
         }
       );

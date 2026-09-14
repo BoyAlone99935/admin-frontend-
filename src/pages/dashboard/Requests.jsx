@@ -26,7 +26,10 @@ export default function Requests() {
       const res = await fetch(
         "https://fan-platform-backend.onrender.com/api/v1/booking/getAllRequests",
         {
-          credentials: "include",
+            headers: {
+  "Content-Type": "application/json",
+  Authorization: `Bearer ${localStorage.getItem("token")}`,
+},
         }
       );
 

@@ -23,16 +23,22 @@ export default function Payments() {
 
       const [ticketRes, meetRes] = await Promise.all([
         fetch(
-          "https://fan-platform-backend.onrender.com/api/v1/tickets/uncomfirmed",
+          "https://fan-platform-backend.onrender.com/api/v1/tickets/unconfirmed",
           {
-            credentials: "include",
+             headers: {
+  "Content-Type": "application/json",
+  Authorization: `Bearer ${localStorage.getItem("token")}`,
+},
           }
         ),
 
         fetch(
           "https://fan-platform-backend.onrender.com/api/v1/booking/pending-payments",
           {
-            credentials: "include",
+              headers: {
+  "Content-Type": "application/json",
+  Authorization: `Bearer ${localStorage.getItem("token")}`,
+},
           }
         ),
       ]);

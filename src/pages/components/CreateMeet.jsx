@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 
 
 // TODO: confirm this matches where meetAndGreetRoutes is actually mounted
-const API_BASE = "http://localhost:3000/api/v1/meet-and-greets";
+const API_BASE = "https://fan-platform-backend-1.onrender.com/api/v1/meet-and-greets";
 
 const initialLocation = {
   name: "",

@@ -12,13 +12,13 @@ export default function TicketPaymentSection({
       setConfirmingPurchase(purchaseId);
 
       const res = await fetch(
-        "https://fan-platform-backend.onrender.com/api/v1/tickets/comfirm",
+        "https://fan-platform-backend.onrender.com/api/v1/tickets/confirm",
         {
           method: "PATCH",
-          credentials: "include",
-          headers: {
-            "Content-Type": "application/json",
-          },
+            headers: {
+  "Content-Type": "application/json",
+  Authorization: `Bearer ${localStorage.getItem("token")}`,
+},
           body: JSON.stringify({
             purchaseId,
           }),

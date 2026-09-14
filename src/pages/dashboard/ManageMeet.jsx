@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 
-const API_BASE = "http://localhost:3000/api/v1/meet-and-greets/get";
+const API_BASE = "https://fan-platform-backend-1.onrender.com/api/v1/meet-and-greets/get";
 
 const toDatetimeLocal = (isoString) => {
   if (!isoString) return "";
@@ -178,7 +178,7 @@ const ManageMeet = () => {
       // untouched otherwise
       newImages.forEach((file) => payload.append("images", file));
 
-      const res = await fetch(`http://localhost:3000/api/v1/meet-and-greets/${id}`, {
+      const res = await fetch(`https://fan-platform-backend-1.onrender.com/api/v1/meet-and-greets/${id}`, {
         method: "PATCH",
         body: payload,
       });

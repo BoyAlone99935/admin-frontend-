@@ -15,7 +15,10 @@ export default function MeetPaymentSection({
         `https://fan-platform-backend.onrender.com/api/v1/booking/update-payment/${id}`,
         {
           method: "PATCH",
-          credentials: "include",
+            headers: {
+  "Content-Type": "application/json",
+  Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
+},
         }
       );
 
