@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
       {
           headers: {
   "Content-Type": "application/json",
-  Authorization: `Bearer ${localStorage.getItem("token")}`,
+  Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
 },
       }
     );
