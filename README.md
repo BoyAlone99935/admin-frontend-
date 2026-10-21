@@ -1,16 +1,57 @@
-# React + Vite
+# Headliner — Admin Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The Headliner Admin Dashboard is the administrative frontend for the Headliner event and ticketing platform.
 
-Currently, two official plugins are available:
+It provides an interface for authorized administrators to manage platform data and perform administrative tasks.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Administrative Dashboard:** Interface for managing platform operations.
+- **Event Management:** Administrative event management functionality.
+- **User Management:** Interfaces for managing user-related data.
+- **Ticket Management:** Administrative ticket management functionality.
+- **Backend Integration:** Communicates with the Headliner backend API.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- JavaScript
+- Vite
+- HTML
+- CSS
+- REST API integration
+
+## 🏗️ Application Architecture
+
+Headliner consists of three main components:
+
+- **User Frontend:** For event discovery, ticket purchasing, and booking workflows.
+- **Backend API:** For application logic, authentication, and database operations.
+- **Admin Frontend:** For administrative interactions with the platform.
+
+### Related Repositories
+
+- [Backend API](https://github.com/BoyAlone99935/fan-platform-backend)
+- [User Frontend](https://github.com/BoyAlone99935/user-frontend)
+
+## 🚀 Related Application
+
+Explore the user-facing application:
+
+**[Launch Headliner](https://boyalone99935.github.io/user-frontend/)**
+
+## 📚 Project Highlights
+
+This project demonstrates experience with:
+
+- Building React-based administrative interfaces.
+- Integrating frontend applications with REST APIs.
+- Implementing administrative workflows.
+- Connecting frontend components to backend functionality.
+- Developing interfaces for managing application data.
+
+## 👨‍💻 Developer
+
+GitHub: [@BoyAlone99935](https://github.com/BoyAlone99935)
